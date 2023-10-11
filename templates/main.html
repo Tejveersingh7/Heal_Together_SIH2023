@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Heal Together</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/main.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="mainheader">
+      <div class="logo">
+        <img src="{{url_for('static', filename = 'images/logo.png')}}">
+      </div>
+
+      <nav>
+        <a href="/">home</a>
+        <a href="#">services</a>
+        <a href="#">about</a>
+        <a href="/contact">contact</a>
+      </nav>
+      <div class="menubtn">
+        <button> HelpLine</button>
+      </div>
+    </div>
+
+    <main>
+      <section class="left-sec">
+        <h2> “You are not alone. You are seen”</h2>
+        <h1> Every mind matters</h1>
+        <p>
+          With modern technology and machine learning models we help students to know their current mental health and
+          providing solution for their mental
+          well being.
+        </p>
+        <a href="/form">
+          <button>
+            Take a free Test
+          </button>
+        </a>
+      </section>
+
+      <section class="right-sec">
+        <figure>
+          <img src="{{url_for('static', filename='/images/photo.png')}}">
+        </figure>
+      </section>
+    </main>
+  </header>
+</body>
+
+</html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/footer.css')}}">
+
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Footer</title>
+</head>
+
+<body>
+  <footer class="footer">
+    <p class="footer__title">HealTogether</p>
+    <div class="footer__social">
+      <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+      <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+      <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+    </div>
+    <p class="footer__copy"></p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  margin-top: auto;
+}
+
+.footer {
+  background-image: linear-gradient(to right, #8eb6ff, #338dfa, #8eb6ff);
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 10px;
+}
+
+.footer__title {
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
+}
+
+.footer__social {
+  margin-bottom: var(--mb-4);
+}
+
+.footer__icon {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2);
+}
+
+.footer__copy {
+  font-size: var(--smaller-font-size);
+}
+
+
+@media screen and (min-width: 992px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

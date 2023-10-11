@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/static/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.mainheader {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainheader .logo img {
+    width: 280px;
+    height: 170px;
+    padding-left: 60px;
+    margin: auto;
+}
+
+.mainheader nav {
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mainheader nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.menubtn {
+    margin-right: 60px;
+}
+
+.menubtn:active {
+    transform: scale(0.96);
+}
+
+.menubtn:hover {
+    transform: scale(0.96);
+    color: black;
+}
+
+.mainheader button {
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.mainheader button:active {
+    transform: scale(0.96);
+}
+
+.mainheader button:hover {
+    transform: scale(0.96);
+    color: black;
+}
+
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .right-sec {
+    padding-right: 70px;
+}
+
+main .left-sec {
+    padding-left: 80px;
+    margin-top: 100px;
+}
+
+.left-sec h2 {
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: lighter;
+    color: #242424;
+    margin-top: 100px;
+}
+
+.left-sec h1 {
+    font-size: 75px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.left-sec p {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.left-sec button {
+    padding: 15px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.left-sec button:active {
+    transform: scale(0.96);
+}
+
+.left-sec button:hover {
+    transform: scale(0.96);
+    color: black;
+}
+
+
+img {
+    height: 500px;
+    width: 600px;
+    margin-right: -15px;
+    margin-top: -10px;
+
+}

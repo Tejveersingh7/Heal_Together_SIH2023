@@ -1,0 +1,141 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    color: #000000;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 10px;
+
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+    
+}
+
+.result {
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+
+}
+p{
+ text-align: left;
+ line-height: 23px;
+}
+.recommendations {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    text-align: left;
+}
+.Treatment{
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    text-align: left;
+}
+.explanation{
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.info{
+    font-size: 18px;
+}
+
+.prediction {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.positive {
+    color: #4CAF50;
+}
+
+.confidence {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 8px;
+}
+
+
+a{
+    background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+a:active {
+	transform: scale(0.96);
+}
+
+a:hover {
+	transform: scale(0.96);
+	color: black;
+}
+
+button {
+    background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:active {
+	transform: scale(0.96);
+}
+
+button:hover {
+	transform: scale(0.96);
+	color: black;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}

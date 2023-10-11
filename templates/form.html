@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scaled=1, user-scalable=no" />
+   <title>Survey_Form</title>
+   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/form.css')}}">
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="mainheader">
+      <div class="logo">
+         <img src="{{url_for('static', filename = 'images/logo.png')}}">
+      </div>
+
+      <nav>
+         <a href="/">home</a>
+         <a href="#">services</a>
+         <a href="#">about</a>
+         <a href="/contact">contact</a>
+      </nav>
+
+      <div class="menubtn">
+         <button> HelpLine</button>
+      </div>
+   </div>
+   <div class="heading">
+      <h1 id="head"> SELF ASSESSMENT TEST</h1>
+      <h2 id="subheading"><i>Feel free to share your responses, your honest answers will help you know better</i></h2>
+   </div>
+   <form action="/predict" method="POST" >
+      <div id="content1">
+         <b><label>The initial questions will request basic personal information from you.
+               Please be aware that your answers are kept confidential, and you have the option to cease providing
+               answers at any point.</label></b> <br><br>
+         <b><label>1. How old are you?</label></b> <br><br>
+         <input required type="number" name="age" placeholder="Enter your age" class="box" min="16" max="30"> <br><br>
+
+         <b><label>2. What is your field of study?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="field_of_study">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Business</option>
+               <option value="2">2.Education</option>
+               <option value="3">3.Engineering</option>
+               <option value="4">4.Finearts</option>
+               <option value="5">5.Human and social development</option>
+               <option value="6">6.Humanities</option>
+               <option value="7">7.Sciences</option>
+               <option value="8">8.Social sciences</option>
+            </select>
+         </div>
+
+         <b><label>3. Do you identify as a student with a disability?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="disability">
+               <option value="">Select Your Answer </option>
+               <option value="1">1.Yes</option>
+               <option value="2">2.No</option>
+               <option value="3">3.Prefer to not answer</option>
+            </select>
+         </div>
+
+         <b><label>4. Do you participate in volunteering?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="volunteering">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Yes, between 1-5 hours per week</option>
+               <option value="2">2.Yes, between 6-10 hours per week</option>
+               <option value="3">3.Yes, between 11-15 hours per week</option>
+               <option value="4">4.Yes, more than 15 hours per week</option>
+               <option value="5">5.No</option>
+            </select>
+         </div>
+
+         <b><label>5. How important is consuming online entertainment content, like Netflix or YouTube, for your
+               leisure?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="online_entertainment_content">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all important</option>
+               <option value="2">2.Slightly important</option>
+               <option value="3">3.moderately important</option>
+               <option value="4">4.very important</option>
+               <option value="5">5.extremely important</option>
+            </select>
+         </div>
+
+         <b><label>6. Within a standard 7-day timeframe, how often do you participate on average in mild exercise for
+               over
+               15 minutes?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="mild_exercise">
+               <option value="">Select Your Answer</option>
+               <option value="0">0 times</option>
+               <option value="1">1 times</option>
+               <option value="2">2 times</option>
+               <option value="3">3 times</option>
+               <option value="4">4 times</option>
+               <option value="5">5 times</option>
+               <option value="6">6 times</option>
+               <option value="7">7 times</option>
+               <option value="9">9 times</option>
+               <option value="8">8 times</option>
+               <option value="10">10 times</option>
+               <option value="11">11 times</option>
+               <option value="12">12 times</option>
+               <option value="13">13 times</option>
+               <option value="14">14 times</option>
+               <option value="15">15 times</option>
+               <option value="16">16 times</option>
+               <option value="17">17 times</option>
+               <option value="18">18 times</option>
+               <option value="19">19 times</option>
+               <option value="20">20 times</option>
+               <option value="21">21 times</option>
+               <option value="22">22 times</option>
+               <option value="23">23 times</option>
+               <option value="24">24 times</option>
+               <option value="25">25 times</option>
+               <option value="26">26 times</option>
+               <option value="27">27 times</option>
+               <option value="28">28 times</option>
+            </select>
+         </div>
+
+
+         <b><label><br><br>Below set of questions are based on the Charlotte Attitudes Towards Sleep (CATS) Scale,
+               a measurement tool for assessing sleep attitudes in students i.e. measure of social desirability,
+               faulty sleep beliefs, or measures of sleep and sleep hygiene.</label></b>
+         <br><br>
+
+         <b><label>7. Is getting a good night's sleep satisfying to you?</label></b>
+         <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cats_2">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Strongly Disagree</option>
+               <option value="2">2.Disagree</option>
+               <option value="3">3.Somewhat Disagree</option>
+               <option value="4">4.Neither Agree Nor Disagree</option>
+               <option value="5">5.Somewhat Agree</option>
+               <option value="6">6.Agree</option>
+               <option value="7">7.Strongly Agree</option>
+            </select>
+         </div>
+
+
+         <b><label>8. Do you consider sleeping to be a pleasant experience?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cats_5">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Strongly Disagree</option>
+               <option value="2">2.Disagree</option>
+               <option value="3">3.Somewhat Disagree</option>
+               <option value="4">4.Neither Agree Nor Disagree</option>
+               <option value="5">5.Somewhat Agree</option>
+               <option value="6">6.Agree</option>
+               <option value="7">7.Strongly Agree</option>
+            </select>
+         </div>
+
+         <b><label>9. Do you find enjoyment in having a good night's sleep??</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cats_6">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Strongly Disagree</option>
+               <option value="2">2.Disagree</option>
+               <option value="3">3.Somewhat Disagree</option>
+               <option value="4">4.Neither Agree Nor Disagree</option>
+               <option value="5">5.Somewhat Agree</option>
+               <option value="6">6.Agree</option>
+               <option value="7">7.Strongly Agree</option>
+            </select>
+         </div>
+
+         <b><label><br><br>Below set of questions are based on the seeking Social Support Scale (SSS),
+               measurement of in-person social support. It includes four subscales: esteem/emotional support,
+               social companionship, informational support, and instrumental support.</label></b> <br><br>
+
+         <b><label>10. Do you think it would be challenging to find someone to accompany you on a day trip, like to the
+               countryside or mountains?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="sss_1"> 
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label>11. Do you have someone you can turn to for advice when dealing with personal problems?</label></b>
+         <br><br>
+         <br>
+         <div id="option1">
+            <select required name="sss_6">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label>12. Is it in frequent for you to receive invitations to do things with others?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="sss_7"> 
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label>13. Would it be problematic for you to find someone willing to take care of your house or apartment
+               (including plants, pets, garden, etc.) if you had to leave town for a few weeks?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="sss_8">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label>14. Would it be tough to find someone capable of providing you with valuable advice if a family
+               crisis were to occur?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="sss_11">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label>15. Do you believe it would be difficult to find assistance in moving to a new house or apartment if
+               you needed it?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="sss_12">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label><br><br>Below set of questions are based on Cognitive Affective scale of Mindfulness ( CAMS ) which
+               measures everyday mindfulness and focuses on the degree to which respondents experience their thoughts
+               and feelings.</label></b>
+         <br><br>
+
+         <b><label>16. Do you find it easy to concentrate on what you are doing?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cams_1">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Not at all</option>
+               <option value="2">2. Sometimes</option>
+               <option value="3">3. Often</option>
+               <option value="4">4. Almost always</option>
+            </select>
+         </div>
+
+         <b><label>17. Are you capable of accepting things you cannot change?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cams_4">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Not at all</option>
+               <option value="2">2. Sometimes</option>
+               <option value="3">3. Often</option>
+               <option value="4">4. Almost always</option>
+            </select>
+         </div>
+
+         <b><label>18. Do you get easily distracted?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cams_6">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Not at all</option>
+               <option value="2">2. Sometimes</option>
+               <option value="3">3. Often</option>
+               <option value="4">4. Almost always</option>
+            </select>
+         </div>
+
+         <b><label>19. Is it simple for you to keep track of your thoughts and feelings?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cams_8">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Not at all</option>
+               <option value="2">2. Sometimes</option>
+               <option value="3">3. Often</option>
+               <option value="4">4. Almost always</option>
+            </select>
+         </div>
+
+         <b><label>20. Do you make an effort to notice your thoughts without passing judgment on them?</label></b>
+         <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cams_9">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Not at all</option>
+               <option value="2">2. Sometimes</option>
+               <option value="3">3. Often</option>
+               <option value="4">4. Almost always</option>
+            </select>
+         </div>
+
+         <b><label>21. Are you able to maintain focus on the present moment?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="cams_11">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Not at all</option>
+               <option value="2">2. Sometimes</option>
+               <option value="3">3. Often</option>
+               <option value="4">4. Almost always</option>
+            </select>
+         </div>
+
+         <b><label>22. How frequently do you intentionally participate in mindfulness or meditation
+               practices?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="mindfulness">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Never</option>
+               <option value="2">2. Rarely</option>
+               <option value="3">3. Sometimes</option>
+               <option value="4">4. Often</option>
+               <option value="5">5. Very often</option>
+            </select>
+         </div>
+
+         <b><label><br><br>Below set of questions are based on Difficulties in Emotional Regulation Scale ( DERS-16 ), a
+               widely used self-report measure of subjective emotion ability, as defined by a prominent clinically
+               derived model of emotion regulation (Gratz and Roemer, 2004)</label></b>
+         <br><br>
+
+         <b><label>23. Do you have trouble getting work done when you're upset?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="ders_3">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+
+         <b><label>24. Do you tend to believe that you'll stay upset for an extended period when you're in that
+               emotional state?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="ders_5">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+
+         <b><label>25. Do you experience shame with yourself for feeling that way when you're upset?</label></b>
+         <br><br>
+         <br>
+         <div id="option1">
+            <select required name="ders_9">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+
+         <b><label>26. Do you hold the belief that there's nothing you can do to improve my emotional state when you're
+               upset?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="ders_12">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+
+         <b><label>27. Is it challenging for you to focus on anything else when you're upset?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="ders_15">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+
+         <b><label>28. Do your emotions feel overwhelming when you're upset?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="ders_16">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Not at all</option>
+               <option value="2">2.A little</option>
+               <option value="3">3.Moderately</option>
+               <option value="4">4.Very Much</option>
+               <option value="5">5.A lot</option>
+            </select>
+         </div>
+
+         <b><label><br><br>Below set of questions are based on the Depression Anxiety Stress Scale ( DASS-21 ), an
+               approved instrument for measuring adverse mental states and depression, anxiety, and stress in adults
+               (patients and non-patients).</label></b>
+         <br><br>
+         <b><label>29. Do you struggle to master the initiative to engage in tasks?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="dass_5">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Did not apply to me at all</option>
+               <option value="2">2. Applied to me to some degree, or some of the times</option>
+               <option value="3">3. Applied to me to considerable degree, or a good part of times</option>
+               <option value="4">4. Applied to me very much or most of the times</option>
+            </select>
+         </div>
+
+         <b><label>30. Do you encounter trembling (shaking), such as in your hands?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="dass_7">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Did not apply to me at all</option>
+               <option value="2">2. Applied to me to some degree, or some of the times</option>
+               <option value="3">3. Applied to me to considerable degree, or a good part of times</option>
+               <option value="4">4. Applied to me very much or most of the times</option>
+            </select>
+         </div>
+
+         <b><label>31. Do you experience moments of agitation (disquiet) ?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="dass_11">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Did not apply to me at all</option>
+               <option value="2">2. Applied to me to some degree, or some of the times</option>
+               <option value="3">3. Applied to me to considerable degree, or a good part of times</option>
+               <option value="4">4. Applied to me very much or most of the times</option>
+            </select>
+         </div>
+
+         <b><label>32. Do you find yourself difficult to unwind and relax?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="dass_12">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Did not apply to me at all</option>
+               <option value="2">2. Applied to me to some degree, or some of the times</option>
+               <option value="3">3. Applied to me to considerable degree, or a good part of times</option>
+               <option value="4">4. Applied to me very much or most of the times</option>
+            </select>
+         </div>
+
+         <b><label>33. Do you become impatient with anything that delayed you from proceeding with your
+               tasks?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="dass_14">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Did not apply to me at all</option>
+               <option value="2">2. Applied to me to some degree, or some of the times</option>
+               <option value="3">3. Applied to me to considerable degree, or a good part of times</option>
+               <option value="4">4. Applied to me very much or most of the times</option>
+            </select>
+         </div>
+
+         <b><label>34. Do you perceive yourself as being particularly sensitive or touchy during that time?</label></b>
+         <br><br>
+         <br>
+         <div id="option1">
+            <select required name="dass_18">
+               <option value="">Select Your Answer</option>
+               <option value="1">1. Did not apply to me at all</option>
+               <option value="2">2. Applied to me to some degree, or some of the times</option>
+               <option value="3">3. Applied to me to considerable degree, or a good part of times</option>
+               <option value="4">4. Applied to me very much or most of the times</option>
+            </select>
+         </div>
+
+         <b><label>35. Have you received an official diagnosis of any specific mental health, psychological, or
+               psychiatric disorder from a healthcare practitioner?</label></b> <br><br>
+         <br>
+         <div id="option1">
+            <select required name="diagnosis">
+               <option value="">Select Your Answer</option>
+               <option value="1">1.Yes </option>
+               <option value="2">2.No </option>
+               <option value="3">3.Prefer not to answer </option>
+            </select>
+         </div>
+      </div>
+      <br>
+      <button id="btn" onclick="">
+         <h3>Submit</h3>
+      </button>
+   </form>
+
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/result.css')}}">
+    <title>Mental Health Prediction Result</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mental Health Prediction Result</h1>
+    </header>
+    {% if result ==0 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: No Issues</h2>
+                <p>Your mental health prediction is <b>No Issues</b></p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection"> 
+                <h2>Symptoms</h2>
+                <!-- <!-- <p>/  -->
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment"> 
+                <h2>Treatment</h2>
+                <!-- <!-- <p>  -->
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Exercise on a daily basis and drink a lot of water.<br>
+                    2. Develop a meditation practice and yoga(deep breathing).<br>
+                    3. Take enough amount of sleep(atleast 7 hours a day).<br>
+                    4. Listning to good music everyday.<br>
+                    5. Eliminating alcohol and drug use,limiting caffeine.<br>
+                    6. Maintaining a healthy diet.<br>
+                    7. Taking out time for self care and practicing your hobbies.<br>
+                </p>
+                <!-- static\pdf\NO_ISSUE.pdf -->
+            </section>
+            <a href="static\pdf\NO_ISSUE.pdf" download="static\pdf\NO_ISSUE.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    {% if result ==1 %}
+        <main>
+            <section class="result">
+                <h2>Prediction:Anxiety and Depression</h2>
+                <p>Your mental health prediction is <b>Anxiety and Depression</b> , indicating a potential concern. Please consider seeking
+                    professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Anxiety:</b> <br>
+                    1. Excessive worry, restlessness, tension, and feelings of dread.<br>
+                    2. Physical symptoms including heart rate, sweating, trembling, and muscle tension.<br>
+                    3. Cognitive symptoms involving racing thoughts, difficulty concentrating, and fear of the worst
+                    outcome.<br>
+                    <b class="info">Depression:</b><br>
+                    1. Persistent sadness, loss of interest or pleasure in activities, and feelings of hopelessness.<br>
+                    2. Physical symptoms can include changes in appetite and sleep patterns, fatigue, and retardation.<br>
+                    3. Cognitive symptoms may include trouble making decisions, difficulty concentrating.
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Anxiety:</b> <br>
+                    1. Treatment for anxiety may involve therapy (cognitive-behavioral therapy, exposure therapy),
+                    medications (antidepressants, anti-anxiety drugs), and lifestyle changes (exercise, stress
+                    management).<br>
+                    2. Lifestyle modifications like reducing caffeine intake, getting regular exercise, and practicing
+                    relaxation techniques can help manage symptoms.<br>
+                    <b class="info">Depression:</b><br>
+                    1. Depression treatment includes therapy (cognitive-behavioral therapy, psychotherapy), antidepressant
+                    medications, and in severe cases, electroconvulsive therapy.<br>
+                    2. Lifestyle changes such as maintaining a healthy diet, engaging in regular physical activity, and
+                    getting adequate sleep are crucial for managing depression.<br>
+                </p>
+            </section>
+        
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Regular exercise can help alleviate symptoms by releasing endorphins and reducing stress.<br>
+                    2. Practicing mindfulness meditation and deep breathing exercises can help manage anxiety and
+                    depression.<br>
+                    3. Maintaining a strong support system through social connections and confiding in trusted
+                    individuals can provide emotional relief.<br>
+                </p>
+            </section>
+            <a href="static\pdf\Anxiety_Depression.pdf" download="static\pdf\Anxiety_Depression.pdf">DOWNLOAD REPORT</a>
+        </main>    
+    {% endif %}
+
+    {% if result ==2 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: Attention-Deficit/Hyperactivity Disorder (ADHD)</h2>
+                <p>Your mental health prediction is <b>Attention-Deficit/Hyperactivity Disorder (ADHD)</b>, indicating a
+                    potential concern. Please consider seeking professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Attention-Deficit/Hyperactivity Disorder (ADHD):</b> <br> 1. Difficulty sustaining
+                    attention in tasks or play activities. <br> 2. Frequent careless mistakes in schoolwork or other
+                    activities. <br> 3. Restlessness, fidgeting,
+                    or tapping hands or feet.<br>
+
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Attention-Deficit/Hyperactivity Disorder (ADHD):</b> <br> 1. Treatment typically
+                    involves a combination of behavioral therapy, medication, and educational support.
+                    <br> 2. Behavioral therapy, such as cognitive-behavioral therapy (CBT), helps individuals learn coping
+                    strategies and improve self-control.
+                    <br> 3. Medications like stimulants (e.g., methylphenidate, amphetamine) or non-stimulants (e.g.,
+                    atomoxetine) may be prescribed by a healthcare professional.<br>
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Establishing a structured daily roug exercises can help manage anxiety and depression.tine with clear
+                    schedules and expectations can help individuals with ADHD.<br> 2. Creating a quiet and organized study
+                    or work environment can improve
+                    focus and productivity.<br> 3. Adequate sleep, a balanced diet, and managing stress are crucial for
+                    managing symptoms<br>
+                </p>
+            </section>
+            <a href="static\pdf\ADHD.pdf" download="static\pdf\ADHD.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    {% if result ==3 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: Obsessive-Compulsive Disorder (OCD)</h2>
+                <p>Your mental health prediction is <b>Obsessive-Compulsive Disorder (OCD)</b>, indicating a potential
+                    concern. Please consider seeking professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Obsessive-Compulsive Disorder (OCD):</b> <br> 1. Intrusive, distressing, and persistent
+                    thoughts, images, or urges that cause anxiety or discomfort<br> 2. Themes of obsessions can vary widely
+                    but often include fears of contamination,
+                    fears of harm coming to oneself or others, and an excessive need for symmetry or order.
+                    <br> 3. Common compulsions include excessive handwashing, checking and rechecking, counting, or seeking
+                    reassurance from others.
+                    <br>
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Obsessive-Compulsive Disorder (OCD):</b> <br> 1. Treatment typically involves a
+                    combination of cognitive-behavioral therapy (CBT) and, in some cases, medication.
+                    <br> 2. CBT, specifically Exposure and Response Prevention (ERP), helps individuals confront their fears
+                    and gradually reduce compulsive behaviors.<br> 3. Medications, such as selective serotonin reuptake
+                    inhibitors (SSRIs), can help reduce
+                    the symptoms of OCD. <br>
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Practicing mindfulness and relaxation techniques can help manage anxiety and intrusive thoughts.<br>
+                    2. Maintaining a regular sleep schedule and a balanced diet can contribute to overall mental
+                    well-being.<br> 3. Engaging in regular
+                    physical activity can reduce stress and improve mood.<br>
+
+                </p>
+            </section>
+            <a href="static\pdf\OCD.pdf" download="static\pdf\OCD.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    {% if result ==4 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: Bipolar Disorder</h2>
+                <p>Your mental health prediction is <b>Bipolar Disorder</b>, indicating a potential concern. Please
+                    consider seeking professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Bipolar Disorder:</b> <br>1. Elevated mood, excessive energy, and increased
+                    self-esteem.<br>2. Reduced need for sleep and impulsivity <br> 3. Fatigue, difficulty concentrating, and
+                    thoughts of self-harm or suicide.<br>
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Bipolar Disorder:</b> <br>Bipolar disorder is typically managed rather than cured:
+                    <br>1. Mood stabilizers and atypical antipsychotic medications are commonly used to control mood swings.
+                    <br> 2. Psychotherapy, particularly
+                    cognitive-behavioral therapy (CBT) or interpersonal therapy, can help manage symptoms and improve coping
+                    skills.<br> 3. Lifestyle changes, including maintaining a regular sleep schedule, managing stress, and
+                    avoiding triggers, are essential
+                    for symptom control.
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Establishing a consistent daily routine and sleep schedule.<br> 2. Keeping a mood diary to track
+                    symptoms and triggers.<br> 3. Engaging in regular exercise and maintaining a balanced diet.<br> 4.
+                    Avoiding alcohol and substance use,
+                    which can exacerbate symptoms.<br>
+
+                </p>
+            </section>
+            <a href="static\pdf\Biploar.pdf" download="static\pdf\Biploar.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+
+    {% if result ==5 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: Post-traumatic stress disorder (PTSD)</h2>
+                <p>Your mental health prediction is <b>Post-traumatic stress disorder (PTSD)</b> , indicating a potential concern. Please consider seeking
+                    professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Post-traumatic stress disorder (PTSD):</b> <br>
+                    1. Flashbacks or intrusive thoughts about the traumatic even.<br>
+                    2. Intense physical or emotional reactions to reminders of the event
+                    Nightmares.<br>
+                    3. Avoiding thinking or talking about the trauma and avoiding people, places, activities or sensations that remind you of the trauma.<br>
+                    
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Post-traumatic stress disorder (PTSD):</b> <br>
+                    1. Treatment for PTSD may involve therapy (Cognitive Processing Therapy,Prolonged Exposure Therapy,Stress Inoculation Training),
+                    medications (antidepressants).<br>
+                    2. Lifestyle modifications like  Write down your thoughts in a daily basis, drink enough water,get restful sleep and be mindful of your caffeine intake these can help manage symptoms.<br>
+                
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Engage in daily physical activity can help alleviate symptoms.<br>
+                    2. Develop a meditation practice and get restful sleep.<br>
+                    3. Limit your use of alcohol and drugs.<br>
+                </p>
+            </section>
+            <a href="static\pdf\PTSD.pdf" download="static\pdf\PTSD.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    {% if result ==6 %}
+        <main>
+            <section class="result">
+                <h2>Prediction:Generalized anxiety disorder (GAD) </h2>
+                <p>Your mental health prediction is <b>Generalized anxiety disorder (GAD)</b> , indicating a potential concern. Please consider seeking
+                    professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Generalized anxiety disorder (GAD):</b> <br>
+                    1. Behavioral symptoms: The person becomes irritable, gets startled easily, and has trouble concentrating.<br>
+                    2. Physical symptoms: Includes—fatigue, nausea, headaches, body aches, sweating, shortness of breath and dizziness.<br>
+                    
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Generalized anxiety disorder (GAD):</b> <br>
+                    1. Treatment for GAD may involve therapy (Psychotherapy-also called talk therapy,cognitive behavioral therapy (CBT)),
+                    medications (antidepressants, Anti-anxiety medications), and lifestyle changes (exercise, stress
+                    management).<br>
+                    2. Lifestyle modifications like healthy eating and making sleep a priority can help manage symptoms.<br>
+                    
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Keeping yourself physically active can help alleviate symptoms by releasing endorphins and reducing stress.<br>
+                    2. Practicing mindfulness, meditation and yoga.<br>
+                    3. Avoid alcohol,recreational drugs,quit smoking and quit drinking coffee.<br>
+                </p>
+            </section>
+            <a href="static\pdf\GAD.pdf" download="static\pdf\GAD.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    {% if result ==7 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: Borderline personality disorder (BPD)</h2>
+                <p>Your mental health prediction is <b>Borderline personality disorder (BPD)</b> , indicating a potential concern. Please consider seeking
+                    professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Borderline personality disorder (BPD):</b> <br>
+                    1. emotional instability and disturbed patterns of thinking or perception and unstable relationships with other.<br>
+                    2. Extreme emotional swings or Chronic feelings of emptiness or Unclear or shifting self-image<br>
+                    3. impulsive behaviour or self-destructive behaviors and Explosive anger or Self-harm.<br>
+                    
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Borderline personality disorder (BPD):</b> <br>
+                    1. Treatment for BPD may involve therapy (Dialectical Behavior Therapy,Cognitive Behavioral Therapy,Schema-Focused Therapy),
+                    medications (antidepressants) and Counseling.<br>
+                    2. Lifestyle modifications like healthy diet,get restful sleep, Using stress-management techniques and Focus on what matters to you these can help manage symptoms.<br>
+                
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Avoid- sugar, soya, dairy, gluten, corn, artificial dyes, preservatives, and food additives and eat a lot of Nutrient supplementation.<br>
+                    2. Develop a meditation practice and exercise daily.<br>
+                    3. Eliminating alcohol and drug use,limiting caffeine.<br>
+                </p>
+            </section>
+            <a href="static\pdf\BPD.pdf" download="static\pdf\BPD.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    {% if result ==8 %}
+        <main>
+            <section class="result">
+                <h2>Prediction: Panic Disorder</h2>
+                <p>Your mental health prediction is <b>Panic Disorder</b> , indicating a potential concern. Please consider seeking professional help or using self-help resources.</p>
+                <p class="confidence">Confidence: 99%</p>
+                <button id="moreInfoButton">More Info</button>
+            </section>
+            <section class="explanation" id="explanationSection">
+                <h2>Symptoms</h2>
+                <p> <b class="info">Panic Disorder: </b> <br>1. Sudden and Overwhelming Fear: Panic attacks typically begin abruptly and are accompanied by a sense of impending doom or terror.<br> 2. Physical Symptoms: These can include a racing heart, sweating,
+                    trembling, shortness of breath, chest pain, dizziness, and nausea. <br>3. Psychological Symptoms: Panic attacks often lead to feelings of unreality or detachment from oneself, as well as a fear of losing control or going crazy.
+
+                    <br>
+                    <!--<b class="info">Depression:</b><br> 1. Persistent sadness, loss of interest or pleasure in activities, and feelings of hopelessness.<br> 2. Physical symptoms can include changes in appetite and sleep patterns, fatigue, and retardation.<br>                3. Cognitive symptoms may include trouble making decisions, difficulty concentrating.-->
+                </p>
+            </section>
+            <section class="Treatment" id="Treatment">
+                <h2>Treatment</h2>
+                <p> <b class="info">Panic Disorder: </b> <br> 1. Psychotherapy: Cognitive-behavioral therapy (CBT) is the most effective form of therapy for panic disorder. It helps individuals identify and change negative thought patterns and behaviors that
+                    contribute to panic attacks.<br> 2. Medications: Doctors may prescribe antidepressants, anti-anxiety medications, or benzodiazepines to manage symptoms and prevent panic attacks. <br>3. Lifestyle Changes: Adopting a healthy lifestyle,
+                    including regular exercise, a balanced diet, and adequate sleep, can help reduce the severity of panic attacks.<br>
+
+                    <!--<b class="info">Depression:</b><br> 1. Depression treatment includes therapy (cognitive-behavioral therapy, psychotherapy), antidepressant medications, and in severe cases, electroconvulsive therapy.<br> 2. Lifestyle changes such as maintaining
+                    a healthy diet, engaging in regular physical activity, and getting adequate sleep are crucial for managing depression.<br>-->
+                </p>
+            </section>
+
+            <section class="recommendations" id="recommendationsSection">
+                <h2>Recommendations</h2>
+                <p>
+                    1. Breathing Techniques: Deep breathing exercises can help manage the physical symptoms of panic attacks. <br>2. Mindfulness and Relaxation: Techniques like meditation and progressive muscle relaxation can reduce anxiety and improve overall
+                    well-being. <br>3. Lifestyle Management: Avoid caffeine, nicotine, and alcohol, as they can trigger or worsen panic attacks. Ensure a consistent sleep schedule and reduce stress through techniques like yoga or journaling.<br>
+                </p>
+            </section>
+            <a href="static\pdf\Panic_Disorder.pdf" download="static\pdf\Panic_Disorder.pdf">DOWNLOAD REPORT</a>
+        </main>
+    {% endif %}
+
+
+    <footer>
+        <h4>For immediate assistance, contact a mental health professional.</h4>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const moreInfoButton = document.getElementById("moreInfoButton");
+        const explanationSection = document.getElementById("explanationSection");
+        const Treatment = document.getElementById("Treatment");
+        const recommendationsSection = document.getElementById("recommendationsSection");
+
+
+        explanationSection.style.display = "none";
+        Treatment.style.display = "none";
+        recommendationsSection.style.display = "none";
+
+        moreInfoButton.addEventListener("click", function () {
+            if (recommendationsSection.style.display === "none") {
+                explanationSection.style.display = "block";
+                Treatment.style.display = "block";
+                recommendationsSection.style.display = "block";
+                moreInfoButton.textContent = "Less Info";
+            } else {
+                explanationSection.style.display = "none";
+                Treatment.style.display = "none";
+                recommendationsSection.style.display = "none";
+                moreInfoButton.textContent = "More Info";
+            }
+        });
+    });
+
+</script>
+
+</html>

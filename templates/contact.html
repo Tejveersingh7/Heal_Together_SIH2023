@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Heal Together</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/contact.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="mainheader">
+    <div class="logo">
+      <img src="{{url_for('static', filename = 'images/logo.png')}}">
+    </div>
+
+    <nav>
+      <a href="/">home</a>
+      <a href="#">services</a>
+      <a href="#">about</a>
+      <a href="/contact">contact</a>
+    </nav>
+    <div class="menubtn">
+      <button> HelpLine</button>
+    </div>
+  </div>
+
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact__container bd-grid">
+      <form action="" class="contact__form">
+        <input type="text" placeholder="Name" class="contact__input">
+        <input type="mail" placeholder="Email" class="contact__input">
+        <textarea name="" id="" cols="0" rows="10" type="message" placeholder="Your Message"
+          class="contact__input"></textarea>
+        <input type="button" value="Send" class="contact__button button">
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
